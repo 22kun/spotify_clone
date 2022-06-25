@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/login_page.dart';
 
@@ -52,10 +54,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Text(
                         "Good morning",
-                        style: TextStyle(color: Colors.white, fontSize: 25),
+                        style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                       SizedBox(
-                        width: 70,
+                        width: 110,
                       ),
                       IconButton(
                         onPressed: () {
@@ -95,30 +97,256 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       SizedBox(
                         width: 20,
                       ),
+
+                      // PLAYLIST 1
+
                       Container(
-                          height: 60,
-                          width: 180,
-                          child: OutlinedButton(
-                              onPressed: () {},
-                              child: Column(
-                                children: [
-                                  Row(
+                        child: GestureDetector(
+                          onTap: (() {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LoginPage()),
+                            );
+                          }),
+                          child: SizedBox(
+                            height: 60,
+                            width: 185,
+                            child: Row(
+                              children: [
+                                Image.asset("assets/playlists/queen_logo.jpg"),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/background/home_screen_bg.png'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  height: 60,
+                                  width: 125,
+                                  alignment: Alignment(-1, 0),
+                                  child: Row(
                                     children: [
-                                      Container(
-                                        color: Colors.green,
-                                        width: 190,
-                                        height: 70,
+                                      SizedBox(
+                                        child: Row(
+                                          children: [
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Text("Queen",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 12)),
+                                            SizedBox(
+                                              width: 50,
+                                            ),
+                                            Text(
+                                              textAlign: TextAlign.right,
+                                              "...",
+                                              style: TextStyle(
+                                                  color: Colors.green),
+                                            )
+                                          ],
+                                        ),
                                       )
                                     ],
-                                  )
-                                ],
-                              )))
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(width: 10),
+
+                      // PLAYLIST 2
+
+                      Container(
+                        child: GestureDetector(
+                          onTap: (() {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LoginPage()),
+                            );
+                          }),
+                          child: Container(
+                            height: 60,
+                            width: 185,
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                    "assets/playlists/ordem_para_desc_album.jpeg"),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/background/home_screen_bg.png'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  height: 60,
+                                  width: 125,
+                                  alignment: Alignment(-1, 0),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        decoration: BoxDecoration(),
+                                        child: Row(
+                                          children: [
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Text("Ordem Paranor...",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 12)),
+                                            SizedBox(
+                                              width: 20,
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 20,
+                      ),
+
+                      // PLAYLIST 3
+
+                      Container(
+                        child: GestureDetector(
+                          onTap: (() {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LoginPage()),
+                            );
+                          }),
+                          child: SizedBox(
+                            height: 60,
+                            width: 185,
+                            child: Row(
+                              children: [
+                                Image.asset("assets/playlists/queen_logo.jpg"),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/background/home_screen_bg.png'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  height: 60,
+                                  width: 125,
+                                  alignment: Alignment(-1, 0),
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        child: Row(
+                                          children: [
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Text("Queen",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 12)),
+                                            SizedBox(
+                                              width: 50,
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(width: 10),
+
+                      // PLAYLIST 4
+
+                      Container(
+                        child: GestureDetector(
+                          onTap: (() {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LoginPage()),
+                            );
+                          }),
+                          child: Container(
+                            height: 60,
+                            width: 185,
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                    "assets/playlists/ordem_para_desc_album.jpeg"),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            'assets/background/home_screen_bg.png'),
+                                        fit: BoxFit.cover),
+                                  ),
+                                  height: 60,
+                                  width: 125,
+                                  alignment: Alignment(-1, 0),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        decoration: BoxDecoration(),
+                                        child: Row(
+                                          children: [
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Text("Ordem Paranor...",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 12)),
+                                            SizedBox(
+                                              width: 20,
+                                            ),
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ],

@@ -48,4 +48,6 @@ flutter:
      - assets/icons/bell.png
      - assets/icons/history.png
      - assets/icons/settings.png
+     - assets/playlists/ordem_para_desc_album.jpeg
+     - assets/playlists/queen_logo.jpg
 
