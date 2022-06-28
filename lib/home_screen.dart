@@ -1,9 +1,9 @@
-import 'dart:ui';
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/login_page.dart';
 
-void main() => runApp(HomeScreen());
+void main() => runApp(LoginPage());
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Spotify',
-      theme: ThemeData(primarySwatch: Colors.grey, fontFamily: 'Gotham'),
+      theme: ThemeData(primarySwatch: Colors.green, fontFamily: 'Gotham'),
       debugShowCheckedModeBanner: false,
       home: MyHomePage(title: 'Spotify'),
     );
@@ -39,14 +39,17 @@ class _MyHomePageState extends State<MyHomePage> {
               image: AssetImage('assets/background/home_screen_bg.png'),
               fit: BoxFit.cover),
         ),
-        child: Column(
+        child: ListView(
           children: [
             Container(
               child: Column(
                 children: [
                   SizedBox(
-                    height: 80,
+                    height: 50,
                   ),
+
+                  // TOP BAR (START)
+
                   Row(
                     children: [
                       SizedBox(
@@ -97,6 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
+                  // TOP BAR (END)
+
                   SizedBox(
                     height: 10,
                   ),
@@ -128,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
-                                            'assets/background/home_screen_bg.png'),
+                                            'assets/background/playlist_bg.png'),
                                         fit: BoxFit.cover),
                                   ),
                                   height: 60,
@@ -191,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
-                                            'assets/background/home_screen_bg.png'),
+                                            'assets/background/playlist_bg.png'),
                                         fit: BoxFit.cover),
                                   ),
                                   height: 60,
@@ -257,7 +262,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
-                                            'assets/background/home_screen_bg.png'),
+                                            'assets/background/playlist_bg.png'),
                                         fit: BoxFit.cover),
                                   ),
                                   height: 60,
@@ -314,7 +319,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
-                                            'assets/background/home_screen_bg.png'),
+                                            'assets/background/playlist_bg.png'),
                                         fit: BoxFit.cover),
                                   ),
                                   height: 60,
@@ -338,7 +343,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             ),
                                           ],
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 )
@@ -348,6 +353,137 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 60,
+                  ),
+
+                  // MADE FOR YOU
+                  Row(
+                    children: [
+                      SizedBox(width: 20),
+                      SizedBox(
+                          width: 380,
+                          child: Text(
+                            "Made for you",
+                            style: TextStyle(color: Colors.white, fontSize: 30),
+                            textAlign: TextAlign.left,
+                          )),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 240,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Row(
+                          children: [
+                            Column(
+                              children: [
+                                // COLLECTION 1
+
+                                FlatButton(
+                                    child: Image.asset(
+                                      "assets/collections/ed_sheeran.png",
+                                    ),
+                                    onPressed: () {}),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    SizedBox(
+                                      width: 190,
+                                      child: Text(
+                                        "Ed Sheeran, Katy Perry, Pitbull and more",
+                                        style: TextStyle(
+                                            color: Colors.white38,
+                                            fontSize: 15,
+                                            fontFamily: 'Poppins'),
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+
+                            // COLLECTION 2
+                            Column(
+                              children: [
+                                FlatButton(
+                                    child: Image.asset(
+                                      "assets/collections/led_zeppelin_stairway_to_heaven.jpg",
+                                      height: 172,
+                                    ),
+                                    onPressed: () {}),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    SizedBox(
+                                      width: 190,
+                                      child: Text(
+                                        "Led Zeppelin, Metallica, Nirvana and more",
+                                        style: TextStyle(
+                                            color: Colors.white38,
+                                            fontSize: 15,
+                                            fontFamily: 'Poppins'),
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+
+                            // COLLECTION 3
+
+                            Column(
+                              children: [
+                                FlatButton(
+                                    child: Image.asset(
+                                      "assets/collections/beatles_abbey_road.jpg",
+                                      height: 172,
+                                    ),
+                                    onPressed: () {}),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    SizedBox(
+                                      width: 190,
+                                      child: Text(
+                                        "The Beatles, Led Zeppelin, Black Sabbath and more",
+                                        style: TextStyle(
+                                            color: Colors.white38,
+                                            fontSize: 15,
+                                            fontFamily: 'Poppins'),
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),

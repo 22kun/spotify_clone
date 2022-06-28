@@ -41,6 +41,10 @@ flutter:
       fonts:
         - asset: fonts/gotham_font/GothamBold.ttf
           style: italic
+
+    - family: Poppins
+      fonts:
+        - asset: fonts/poppins/Poppins-Regular.ttf
   uses-material-design: true
   assets:
      - assets/icons/spotify_logo_white.png
@@ -50,4 +54,8 @@ flutter:
      - assets/icons/settings.png
      - assets/playlists/ordem_para_desc_album.jpeg
      - assets/playlists/queen_logo.jpg
+     - assets/background/playlist_bg.png
+     - assets/collections/ed_sheeran.png
+     - assets/collections/beatles_abbey_road.jpg
+     - assets/collections/led_zeppelin_stairway_to_heaven.jpg
 
