@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           // Navigator.push(
                           //   context,
                           //   MaterialPageRoute(
-                          //       builder: (context) => LoginPage()),
+                          // builder: (context) => LoginPage()),
                           // );
                         },
                         icon: Image.asset("assets/icons/history.png"),
