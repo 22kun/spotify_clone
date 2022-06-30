@@ -3,10 +3,10 @@ import 'package:spotify_clone/home_screen.dart';
 import 'package:spotify_clone/login_page.dart';
 import 'package:spotify_clone/search.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const Navigation());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Navigation extends StatelessWidget {
+  const Navigation({Key? key}) : super(key: key);
 
   static const String _title = 'Flutter Code Sample';
 
@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: _title,
+      debugShowCheckedModeBanner: false,
       home: MyStatefulWidget(),
     );
   }
@@ -36,25 +37,42 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return Scaffold(
         backgroundColor: Colors.white,
         body: _pageOptions[selectedPage],
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home, size: 30), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.mail, size: 30), label: 'Search'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle, size: 30), label: 'Library'),
-          ],
-          selectedItemColor: Colors.green,
-          elevation: 5.0,
-          unselectedItemColor: Colors.green[900],
-          currentIndex: selectedPage,
-          backgroundColor: Colors.white,
-          onTap: (index) {
-            setState(() {
-              selectedPage = index;
-            });
-          },
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/background/nav_bar.png'),
+                fit: BoxFit.cover),
+          ),
+          child: BottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(
+                  icon: Image.asset(
+                    "assets/icons/home.png",
+                    height: 30,
+                  ),
+                  label: 'Home'),
+              BottomNavigationBarItem(
+                  icon: Image.asset(
+                    "assets/icons/search.png",
+                    height: 30,
+                  ),
+                  label: 'Search'),
+              BottomNavigationBarItem(
+                  icon:
+                      Image.asset("assets/icons/your_library.png", height: 30),
+                  label: 'Your Library'),
+            ],
+            selectedItemColor: Colors.green,
+            elevation: 5.0,
+            unselectedItemColor: Colors.white,
+            currentIndex: selectedPage,
+            backgroundColor: Colors.black54,
+            onTap: (index) {
+              setState(() {
+                selectedPage = index;
+              });
+            },
+          ),
         ));
   }
 }

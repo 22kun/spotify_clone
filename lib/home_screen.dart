@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/login_page.dart';
+import 'package:spotify_clone/navigation.dart';
 
-void main() => runApp(LoginPage());
+void main() => runApp(Navigation());
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -191,7 +192,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Row(
                               children: [
                                 Image.asset(
-                                    "assets/playlists/ordem_para_desc_album.jpeg"),
+                                    "assets/songs/paranoid_sabbath.jpg"),
                                 Container(
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
@@ -211,7 +212,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             SizedBox(
                                               width: 10,
                                             ),
-                                            Text("Ordem Paranor...",
+                                            Text("Paranoid",
                                                 style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize: 12)),
@@ -257,7 +258,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: 185,
                             child: Row(
                               children: [
-                                Image.asset("assets/playlists/queen_logo.jpg"),
+                                Image.asset("assets/songs/stairway_led.jpeg"),
                                 Container(
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
@@ -276,7 +277,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             SizedBox(
                                               width: 10,
                                             ),
-                                            Text("Queen",
+                                            Text("Led Zeppelin",
                                                 style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize: 12)),
@@ -481,7 +482,366 @@ class _MyHomePageState extends State<MyHomePage> {
                               ],
                             ),
                           ],
-                        )
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  SizedBox(height: 40),
+                  // TRENDING NOW
+                  Row(
+                    children: [
+                      SizedBox(width: 20),
+                      SizedBox(
+                          width: 380,
+                          child: Text(
+                            "Trending now",
+                            style: TextStyle(color: Colors.white, fontSize: 30),
+                            textAlign: TextAlign.left,
+                          )),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 240,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Row(
+                          children: [
+                            // SONG 1
+
+                            Column(
+                              children: [
+                                FlatButton(
+                                    child: Image.asset(
+                                      "assets/songs/master_metallica.jpg",
+                                      width: 172,
+                                    ),
+                                    onPressed: () {}),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "Master of Puppets",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 17,
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "Song . Metallica",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 15,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            // SONG 2
+
+                            Column(
+                              children: [
+                                FlatButton(
+                                    child: Image.asset(
+                                      "assets/songs/hounds_kate.jpeg",
+                                      width: 172,
+                                    ),
+                                    onPressed: () {}),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "A Deal With God...",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 17,
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "Song . Kate Bush",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 15,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            // SONG 3
+
+                            Column(
+                              children: [
+                                FlatButton(
+                                    child: Image.asset(
+                                      "assets/songs/stairway_led.jpeg",
+                                      width: 172,
+                                    ),
+                                    onPressed: () {}),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "Stairway to Heaven",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 17,
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "Song . Led Zeppelin",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 15,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 40),
+
+                  // ROCK CLASSICS
+
+                  Row(
+                    children: [
+                      SizedBox(width: 20),
+                      SizedBox(
+                          width: 380,
+                          child: Text(
+                            "Rock classics",
+                            style: TextStyle(color: Colors.white, fontSize: 30),
+                            textAlign: TextAlign.left,
+                          )),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 240,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Row(
+                          children: [
+                            // SONG 1
+
+                            Column(
+                              children: [
+                                FlatButton(
+                                    child: Image.asset(
+                                      "assets/songs/paranoid_sabbath.jpg",
+                                      width: 172,
+                                    ),
+                                    onPressed: () {}),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "War Pigs",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 17,
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "Song . Black Sabbath",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 15,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            // SONG 2
+
+                            Column(
+                              children: [
+                                FlatButton(
+                                    child: Image.asset(
+                                      "assets/songs/the_dark_side.jpeg",
+                                      width: 172,
+                                    ),
+                                    onPressed: () {}),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "Money",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 17,
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "Song . Pink Floyd",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 15,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            // SONG 3
+
+                            Column(
+                              children: [
+                                FlatButton(
+                                    child: Image.asset(
+                                      "assets/songs/nevermind.jpg",
+                                      width: 172,
+                                    ),
+                                    onPressed: () {}),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      children: [
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "Smell Like Teen S...",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 17,
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 190,
+                                          child: Text(
+                                            "Song . Nirvana",
+                                            style: TextStyle(
+                                              color: Colors.white38,
+                                              fontSize: 15,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),

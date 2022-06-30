@@ -59,5 +59,16 @@ flutter:
      - assets/collections/beatles_abbey_road.jpg
      - assets/collections/led_zeppelin_stairway_to_heaven.jpg
      - assets/background/search_bg.png
+     - assets/icons/your_library.png
+     - assets/icons/home.png
+     - assets/icons/search.png
+     - assets/songs/master_metallica.jpg
+     - assets/songs/hounds_kate.jpeg
+     - assets/songs/stairway_led.jpeg
+     - assets/background/nav_bar.png
+     - assets/songs/nevermind.jpg
+     - assets/songs/the_dark_side.jpeg
+     - assets/songs/paranoid_sabbath.jpg
      
+
 
