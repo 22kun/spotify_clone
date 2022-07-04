@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/home_screen.dart';
+import 'navigation.dart';
 
 void main() {
   runApp(const LoginPage());
@@ -165,7 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => Navigation()),
                   );
                 },
                 child: Text(
