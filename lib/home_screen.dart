@@ -5,8 +5,9 @@ import 'package:spotify_clone/components/home_screen/collection.dart';
 import 'package:spotify_clone/components/home_screen/song.dart';
 import 'package:spotify_clone/login_page.dart';
 import 'package:spotify_clone/components/home_screen/playlist.dart';
+import 'package:spotify_clone/navigation.dart';
 
-void main() => runApp(HomeScreen());
+void main() => runApp(Navigation());
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
