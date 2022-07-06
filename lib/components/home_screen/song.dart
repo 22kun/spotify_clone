@@ -34,12 +34,12 @@ class Song extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              width: 20,
+              width: 5,
             ),
             Column(
               children: [
                 SizedBox(
-                  width: 190,
+                  width: 175,
                   child: Text(
                     song,
                     style: TextStyle(
@@ -49,7 +49,7 @@ class Song extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 190,
+                  width: 175,
                   child: Text(
                     info,
                     style: TextStyle(

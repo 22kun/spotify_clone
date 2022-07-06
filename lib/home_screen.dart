@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 50,
+                    height: 30,
                   ),
 
                   // TOP BAR (START)
@@ -185,7 +185,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         Row(
                           children: [
                             // COLLECTION 1
-
+                            SizedBox(
+                              width: 13,
+                            ),
                             Collection(
                                 asset: "assets/collections/ed_sheeran.png",
                                 app: LoginPage(),
@@ -207,9 +209,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                 asset:
                                     "assets/collections/beatles_abbey_road.jpg",
                                 app: LoginPage(),
-                                info:
-                                    "The Beatles, Led Zeppelin, Black Sabbath and more"),
+                                info: "The Beatles, Black Sabbath and more"),
                           ],
+                        ),
+                        SizedBox(
+                          width: 13,
                         ),
                       ],
                     ),
@@ -239,6 +243,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Row(
                           children: [
+                            SizedBox(
+                              width: 13,
+                            ),
                             // SONG 1
 
                             Song(
@@ -270,6 +277,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                 info: "Song . Led Zeppelin"),
                           ],
                         ),
+                        SizedBox(
+                          width: 13,
+                        ),
                       ],
                     ),
                   ),
@@ -299,6 +309,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         Row(
                           children: [
+                            SizedBox(
+                              width: 13,
+                            ),
                             // SONG 1
 
                             Song(
@@ -329,6 +342,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                 song: "Smells Like Teen...",
                                 info: "Song . Nirvana"),
                           ],
+                        ),
+                        SizedBox(
+                          width: 13,
                         ),
                       ],
                     ),

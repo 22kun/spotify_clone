@@ -29,10 +29,10 @@ class Collection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              width: 20,
+              width: 5,
             ),
             SizedBox(
-              width: 190,
+              width: 175,
               child: Text(
                 info,
                 style: TextStyle(
