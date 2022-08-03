@@ -1,12 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/home_screen.dart';
+import 'package:spotify_clone/pages/home_screen.dart';
 import 'navigation.dart';
-
-void main() {
-  runApp(const LoginPage());
-}
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -37,11 +33,8 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.black54,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(
-              height: 300,
-            ),
             Image.asset('assets/icons/spotify_logo_white.png'),
             const SizedBox(
               height: 30,

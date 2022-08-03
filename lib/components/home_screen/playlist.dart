@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/home_screen.dart';
-import 'package:spotify_clone/login_page.dart';
+import 'package:spotify_clone/pages/home_screen.dart';
+import 'package:spotify_clone/pages/login_page.dart';
 
 class Playlist extends StatelessWidget {
   Widget app;

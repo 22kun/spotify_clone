@@ -3,9 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/home_screen/collection.dart';
 import 'package:spotify_clone/components/home_screen/song.dart';
-import 'package:spotify_clone/login_page.dart';
+import 'package:spotify_clone/pages/login_page.dart';
 import 'package:spotify_clone/components/home_screen/playlist.dart';
-import 'package:spotify_clone/navigation.dart';
+import 'package:spotify_clone/pages/navigation.dart';
+import 'package:spotify_clone/pages/playlist_screen.dart';
 
 void main() => runApp(Navigation());
 
@@ -119,7 +120,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       // PLAYLIST 1
 
                       Playlist(
-                          app: LoginPage(),
+                          app: PlaylistScreen(
+                              cover: "assets/playlists/queen_logo.png",
+                              label: "aaaa",
+                              title: "Queen"),
                           asset: "assets/playlists/queen_logo.jpg",
                           label: "Queen"),
 

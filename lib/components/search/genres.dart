@@ -1,7 +1,7 @@
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/login_page.dart';
+import 'package:spotify_clone/pages/login_page.dart';
 
 class Genre extends StatelessWidget {
   Color color;

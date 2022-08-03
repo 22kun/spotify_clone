@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/home_screen.dart';
-import 'package:spotify_clone/login_page.dart';
-import 'package:spotify_clone/search.dart';
+import 'package:spotify_clone/components/playlist_screen/item.dart';
+import 'package:spotify_clone/pages/home_screen.dart';
+import 'package:spotify_clone/pages/login_page.dart';
+import 'package:spotify_clone/pages/playlist_screen.dart';
+import 'package:spotify_clone/pages/search.dart';
 
 void main() => runApp(const Navigation());
 
@@ -30,18 +32,27 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int selectedPage = 0;
 
-  final _pageOptions = [HomeScreen(), Search(), LoginPage()];
+  final _pageOptions = [
+    HomeScreen(),
+    PlaylistScreen(
+      cover: "",
+      label: "",
+      title: "",
+      Item: Item(capa: "", name: "", artist: ""),
+    ),
+    Search(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         body: _pageOptions[selectedPage],
         bottomNavigationBar: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/background/nav_bar.png'),
-                fit: BoxFit.cover),
+                fit: BoxFit.fill),
           ),
           child: BottomNavigationBar(
             items: [
