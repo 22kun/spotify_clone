@@ -36,7 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
       body: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
@@ -121,8 +120,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
                       Playlist(
                           app: PlaylistScreen(
-                              cover: "assets/playlists/queen_logo.png",
-                              label: "aaaa",
+                              cover: "assets/playlists/queen_logo.jpg",
+                              label: "XxxxxxxxxxxxXxxxxxxxxxxxxxxxxxxxx",
                               title: "Queen"),
                           asset: "assets/playlists/queen_logo.jpg",
                           label: "Queen"),

@@ -34,13 +34,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   final _pageOptions = [
     HomeScreen(),
-    PlaylistScreen(
-      cover: "",
-      label: "",
-      title: "",
-      Item: Item(capa: "", name: "", artist: ""),
-    ),
     Search(),
+    PlaylistScreen(
+        cover: "assets/playlists/ordem_para_desc_album.jpeg",
+        title: "Ordem Paranormal: Desconjuração",
+        label:
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        item0: Item(
+          name: "aaaa",
+          capa: "assets/playlists/ordem_para_desc_album.jpeg",
+          artist: 'Julio Victor',
+        ),
+        item1: Item(
+          name: "aaaa",
+          capa: "assets/playlists/ordem_para_desc_album.jpeg",
+          artist: 'Julio Victor',
+        ))
   ];
 
   @override
