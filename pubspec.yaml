@@ -47,30 +47,11 @@ flutter:
         - asset: fonts/poppins/Poppins-Regular.ttf
   uses-material-design: true
   assets:
-     - assets/icons/spotify_logo_white.png
-     - assets/background/home_screen_bg.png
-     - assets/icons/bell.png
-     - assets/icons/history.png
-     - assets/icons/settings.png
-     - assets/playlists/ordem_para_desc_album.jpeg
-     - assets/playlists/queen_logo.jpg
-     - assets/background/playlist_bg.png
-     - assets/collections/ed_sheeran.png
-     - assets/collections/beatles_abbey_road.jpg
-     - assets/collections/led_zeppelin_stairway_to_heaven.jpg
-     - assets/background/search_bg.png
-     - assets/icons/your_library.png
-     - assets/icons/home.png
-     - assets/icons/search.png
-     - assets/songs/master_metallica.jpg
-     - assets/songs/hounds_kate.jpeg
-     - assets/songs/stairway_led.jpeg
-     - assets/background/nav_bar.png
-     - assets/songs/nevermind.jpg
-     - assets/songs/the_dark_side.jpeg
-     - assets/songs/paranoid_sabbath.jpg
-     - assets/icons/search.webp
-     - assets/icons/spotify_icon2.png
+     - assets/icons/
+     - assets/background/
+     - assets/collections/
+     - assets/playlists/
+     - assets/songs/
      
 
 

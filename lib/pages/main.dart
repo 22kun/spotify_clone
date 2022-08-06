@@ -5,4 +5,4 @@ import 'package:spotify_clone/pages/login_page.dart';
 import 'package:spotify_clone/pages/navigation.dart';
 import 'package:spotify_clone/pages/playlist_screen.dart';
 
-void main() => runApp(HomeScreen());
+void main() => runApp(Navigation());

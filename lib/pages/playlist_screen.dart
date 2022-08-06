@@ -1,9 +1,12 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/playlist_screen/item.dart';
 import 'package:spotify_clone/pages/home_screen.dart';
 import 'package:spotify_clone/pages/navigation.dart';
+import 'dart:math';
 
-class PlaylistScreen extends StatelessWidget {
+class PlaylistScreen extends StatefulWidget {
   String cover;
   String title;
   String label;
@@ -27,7 +30,20 @@ class PlaylistScreen extends StatelessWidget {
   });
 
   @override
+  State<PlaylistScreen> createState() => _PlaylistScreenState();
+}
+
+class _PlaylistScreenState extends State<PlaylistScreen> {
+  Random random = new Random();
+
+  @override
   Widget build(BuildContext context) {
+    int randomNumber = random.nextInt(999);
+    int randomNumber2 = random.nextInt(999);
+    int randomNumber3 = random.nextInt(23);
+    int randomNumber4 = random.nextInt(59);
+    bool isred = true;
+
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Container(
@@ -64,13 +80,13 @@ class PlaylistScreen extends StatelessWidget {
               children: [
                 SizedBox(
                   width: 300,
-                  child: Image.asset(cover, fit: BoxFit.cover),
+                  child: Image.asset(widget.cover, fit: BoxFit.cover),
                 ),
                 SizedBox(height: 20),
                 SizedBox(
-                  width: 380,
+                  width: 390,
                   child: Text(
-                    label,
+                    widget.label,
                     style: TextStyle(
                         color: Colors.grey,
                         fontFamily: "Poppins",
@@ -87,8 +103,38 @@ class PlaylistScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "$randomNumber,$randomNumber2 likes . $randomNumber3"
+                      "h $randomNumber4"
+                      "min",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  child: Row(children: [
+                    SizedBox(
+                      width: 10,
+                      height: 70,
+                    ),
+                    IconButton(
+                        onPressed: () {
+                          setState(() {
+                            isred = !isred;
+                          });
+                        },
+                        icon: Image.asset("assets/icons/heart_outlined.png",
+                            color:
+                                (isred == false) ? Colors.white : Colors.red))
+                  ]),
+                )
               ],
             )
           ],
