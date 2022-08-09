@@ -41,7 +41,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         label:
             "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         item0: Item(
-          name: "aaaa",
+          name: "Abcdefghijklmno",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
         ),
@@ -49,7 +49,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           name: "aaaa",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
-        ))
+        )),
   ];
 
   @override

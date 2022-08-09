@@ -10,12 +10,13 @@ class PlaylistScreen extends StatefulWidget {
   String cover;
   String title;
   String label;
+  Item item0;
 
   PlaylistScreen({
     required this.cover,
     required this.title,
     required this.label,
-    item0,
+    required this.item0,
     item1,
     item2,
     item3,
@@ -114,7 +115,8 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                       "$randomNumber,$randomNumber2 likes . $randomNumber3"
                       "h $randomNumber4"
                       "min",
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(
+                          color: Colors.grey, fontFamily: "Gotham-Bold"),
                     ),
                   ],
                 ),
@@ -122,7 +124,6 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                   child: Row(children: [
                     SizedBox(
                       width: 10,
-                      height: 70,
                     ),
                     IconButton(
                         onPressed: () {
@@ -132,8 +133,26 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                         },
                         icon: Image.asset("assets/icons/heart_outlined.png",
                             color:
-                                (isred == false) ? Colors.white : Colors.red))
+                                (isred == false) ? Colors.white : Colors.red)),
+                    SizedBox(
+                      width: 270,
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Image.asset("assets/icons/play_button.png"),
+                      iconSize: 60,
+                    )
                   ]),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  height: 600,
+                  width: 420,
+                  child: Column(
+                    children: [widget.item0, widget.item0],
+                  ),
                 )
               ],
             )

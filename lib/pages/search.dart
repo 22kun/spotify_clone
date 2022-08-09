@@ -14,7 +14,7 @@ class Search extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Spotify',
-      theme: ThemeData(primarySwatch: Colors.green, fontFamily: 'Gotham'),
+      theme: ThemeData(primarySwatch: Colors.green, fontFamily: 'Gotham-Bold'),
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(title: 'Spotify'),
     );

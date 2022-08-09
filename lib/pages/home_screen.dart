@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/home_screen/collection.dart';
 import 'package:spotify_clone/components/home_screen/song.dart';
+import 'package:spotify_clone/components/playlist_screen/item.dart';
 import 'package:spotify_clone/pages/login_page.dart';
 import 'package:spotify_clone/components/home_screen/playlist.dart';
 import 'package:spotify_clone/pages/navigation.dart';
@@ -17,7 +18,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Spotify',
-      theme: ThemeData(primarySwatch: Colors.green, fontFamily: 'Gotham'),
+      theme: ThemeData(primarySwatch: Colors.green, fontFamily: 'Gotham-Bold'),
       debugShowCheckedModeBanner: false,
       home: MyHomePage(title: 'Spotify'),
     );
@@ -120,6 +121,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
                       Playlist(
                           app: PlaylistScreen(
+                              item0: Item(
+                                  capa: "assets/playlists/queen_logo.jpg",
+                                  name: "ablublubléblablabka",
+                                  artist: "Queen"),
                               cover: "assets/playlists/queen_logo.jpg",
                               label: "XxxxxxxxxxxxXxxxxxxxxxxxxxxxxxxxx",
                               title: "Queen"),

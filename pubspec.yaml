@@ -37,9 +37,14 @@ flutter_native_splash:
 
 flutter:
   fonts:
-    - family: Gotham
+    - family: Gotham-Bold
       fonts:
         - asset: fonts/gotham_font/GothamBold.ttf
+          style: italic
+    
+    - family: Gotham
+      fonts:
+        - asset: fonts/gotham_font/GothamLight.ttf
           style: italic
 
     - family: Poppins
