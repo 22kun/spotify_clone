@@ -122,9 +122,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       Playlist(
                           app: PlaylistScreen(
                               item0: Item(
-                                  capa: "assets/playlists/queen_logo.jpg",
-                                  name: "ablublubléblablabka",
-                                  artist: "Queen"),
+                                capa: "assets/playlists/queen_logo.jpg",
+                                name: "Somebody to Love",
+                                artist: "Queen",
+                              ),
                               cover: "assets/playlists/queen_logo.jpg",
                               label: "XxxxxxxxxxxxXxxxxxxxxxxxxxxxxxxxx",
                               title: "Queen"),

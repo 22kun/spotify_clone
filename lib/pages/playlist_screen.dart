@@ -11,13 +11,14 @@ class PlaylistScreen extends StatefulWidget {
   String title;
   String label;
   Item item0;
+  Item? item1;
 
   PlaylistScreen({
     required this.cover,
     required this.title,
     required this.label,
     required this.item0,
-    item1,
+    this.item1,
     item2,
     item3,
     item4,
@@ -31,7 +32,7 @@ class PlaylistScreen extends StatefulWidget {
   });
 
   @override
-  State<PlaylistScreen> createState() => _PlaylistScreenState();
+  _PlaylistScreenState createState() => _PlaylistScreenState();
 }
 
 class _PlaylistScreenState extends State<PlaylistScreen> {
@@ -43,7 +44,7 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
     int randomNumber2 = random.nextInt(999);
     int randomNumber3 = random.nextInt(23);
     int randomNumber4 = random.nextInt(59);
-    bool isred = true;
+    Color red = Colors.red;
 
     return Scaffold(
       backgroundColor: Colors.transparent,
@@ -128,12 +129,11 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                     IconButton(
                         onPressed: () {
                           setState(() {
-                            isred = !isred;
+                            red == Colors.white;
                           });
                         },
                         icon: Image.asset("assets/icons/heart_outlined.png",
-                            color:
-                                (isred == false) ? Colors.white : Colors.red)),
+                            color: red)),
                     SizedBox(
                       width: 270,
                     ),
@@ -151,7 +151,9 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                   height: 600,
                   width: 420,
                   child: Column(
-                    children: [widget.item0, widget.item0],
+                    children: [
+                      widget.item0,
+                    ],
                   ),
                 )
               ],
