@@ -36,20 +36,61 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     HomeScreen(),
     Search(),
     PlaylistScreen(
-        cover: "assets/playlists/ordem_para_desc_album.jpeg",
-        title: "Ordem Paranormal: Desconjuração",
-        label:
-            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        item0: Item(
-          name: "Abcdefghijklmno",
-          capa: "assets/playlists/ordem_para_desc_album.jpeg",
-          artist: 'Julio Victor',
-        ),
-        item1: Item(
-          name: "aaaa",
-          capa: "assets/playlists/ordem_para_desc_album.jpeg",
-          artist: 'Julio Victor',
-        )),
+      cover: "assets/playlists/ordem_para_desc_album.jpeg",
+      title: "Ordem Paranormal: Desconjuração (Trilha Sonora)",
+      label:
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      item0: Item(
+        name: "Abcdefghijklmno",
+        capa: "assets/playlists/ordem_para_desc_album.jpeg",
+        artist: 'Julio Victor',
+      ),
+      item1: Item(
+        name: "aaaa",
+        capa: "assets/playlists/ordem_para_desc_album.jpeg",
+        artist: 'Julio Victor',
+      ),
+      item2: Item(
+        name: "aaaa",
+        capa: "assets/playlists/ordem_para_desc_album.jpeg",
+        artist: 'Julio Victor',
+      ),
+      item3: Item(
+        name: "aaaa",
+        capa: "assets/playlists/ordem_para_desc_album.jpeg",
+        artist: 'Julio Victor',
+      ),
+      item4: Item(
+        name: "aaaa",
+        capa: "assets/playlists/ordem_para_desc_album.jpeg",
+        artist: 'Julio Victor',
+      ),
+      item5: Item(
+        name: "aaaa",
+        capa: "assets/playlists/ordem_para_desc_album.jpeg",
+        artist: 'Julio Victor',
+      ),
+      item6: Item(
+        name: "aaaa",
+        capa: "assets/playlists/ordem_para_desc_album.jpeg",
+        artist: 'Julio Victor',
+      ),
+      item7: Item(
+        name: "aaaa",
+        capa: "assets/playlists/ordem_para_desc_album.jpeg",
+        artist: 'Julio Victor',
+      ),
+      item8: Item(
+        name: "aaaa",
+        capa: "assets/playlists/ordem_para_desc_album.jpeg",
+        artist: 'Julio Victor',
+      ),
+      item9: Item(
+        name: "aaaa",
+        capa: "assets/playlists/ordem_para_desc_album.jpeg",
+        artist: 'Julio Victor',
+      ),
+    ),
   ];
 
   @override

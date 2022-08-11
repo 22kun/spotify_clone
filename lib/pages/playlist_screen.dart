@@ -11,24 +11,30 @@ class PlaylistScreen extends StatefulWidget {
   String title;
   String label;
   Item item0;
-  Item? item1;
+  Item item1;
+  Item item2;
+  Item item3;
+  Item item4;
+  Item item5;
+  Item item6;
+  Item item7;
+  Item item8;
+  Item item9;
 
   PlaylistScreen({
     required this.cover,
     required this.title,
     required this.label,
     required this.item0,
-    this.item1,
-    item2,
-    item3,
-    item4,
-    item5,
-    item6,
-    item7,
-    item8,
-    item9,
-    item10,
-    item11,
+    required this.item1,
+    required this.item2,
+    required this.item3,
+    required this.item4,
+    required this.item5,
+    required this.item6,
+    required this.item7,
+    required this.item8,
+    required this.item9,
   });
 
   @override
@@ -80,11 +86,35 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
             ),
             Column(
               children: [
+                // Album Cover
+
                 SizedBox(
                   width: 300,
                   child: Image.asset(widget.cover, fit: BoxFit.cover),
                 ),
                 SizedBox(height: 20),
+
+                // Title
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 70
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(
+                          widget.title,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: "Poppins",
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+                SizedBox(height: 2),
                 SizedBox(
                   width: 390,
                   child: Text(
@@ -148,13 +178,22 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                   height: 20,
                 ),
                 Container(
-                  height: 600,
                   width: 420,
-                  child: Column(
-                    children: [
-                      widget.item0,
-                    ],
-                  ),
+                  child: Column(children: [
+                    widget.item0,
+                    widget.item1,
+                    widget.item2,
+                    widget.item3,
+                    widget.item4,
+                    widget.item5,
+                    widget.item6,
+                    widget.item7,
+                    widget.item8,
+                    widget.item9,
+                  ]),
+                ),
+                SizedBox(
+                  height: 30,
                 )
               ],
             )

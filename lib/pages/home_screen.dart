@@ -126,6 +126,42 @@ class _MyHomePageState extends State<MyHomePage> {
                                 name: "Somebody to Love",
                                 artist: "Queen",
                               ),
+                              item1: Item(
+                                  artist: "Queen",
+                                  capa: "assets/playlists/queen_logo.jpg",
+                                  name: "Don't Stop Me Now"),
+                              item2: Item(
+                                  artist: "Queen",
+                                  capa: "assets/playlists/queen_logo.jpg",
+                                  name: "Killer Queen"),
+                              item3: Item(
+                                  artist: "Queen",
+                                  capa: "assets/playlists/queen_logo.jpg",
+                                  name: "I Want To Break Free"),
+                              item4: Item(
+                                  artist: "Queen",
+                                  capa: "assets/playlists/queen_logo.jpg",
+                                  name: "Bohemian Rhapsody"),
+                              item5: Item(
+                                  artist: "Queen",
+                                  capa: "assets/playlists/queen_logo.jpg",
+                                  name: "Love of My Life"),
+                              item6: Item(
+                                  artist: "Queen",
+                                  capa: "assets/playlists/queen_logo.jpg",
+                                  name: "Another One Bites The Dust"),
+                              item7: Item(
+                                  artist: "Queen",
+                                  capa: "assets/playlists/queen_logo.jpg",
+                                  name: "Radio Gaga"),
+                              item8: Item(
+                                  artist: "Queen",
+                                  capa: "assets/playlists/queen_logo.jpg",
+                                  name: "Under Pressure"),
+                              item9: Item(
+                                  artist: "Queen",
+                                  capa: "assets/playlists/queen_logo.jpg",
+                                  name: "Sheer Heart-Attack"),
                               cover: "assets/playlists/queen_logo.jpg",
                               label: "XxxxxxxxxxxxXxxxxxxxxxxxxxxxxxxxx",
                               title: "Queen"),
