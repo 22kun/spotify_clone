@@ -11,7 +11,6 @@
 <br>                                                   
  
 
-<br><br>
 
 
  * ## Home Screen
@@ -31,7 +30,7 @@
 <br><br>
 
 
->## Tecnologias usadas: 
+>## Used Features: 
 <div>
 
 >><img width="5%" alt="Flutter" src="https://cdn.iconscout.com/icon/free/png-256/flutter-3629369-3032362.png"> $~~~$ | $~~~$
