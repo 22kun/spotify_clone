@@ -19,8 +19,8 @@
 
 
  
-<img width="200" src="assets/readme/home_screen-screenshot.png"> $~~~~~$
-<img width="200" src="assets/readme/search_screen-screenshot.png"> $~~~~~~~~~~$
+<img width="200" src="assets/readme/home_screen-screenshot.png"> $~~~~~~~~$
+<img width="200" src="assets/readme/search_screen-screenshot.png"> $~~~~~~~~~~~~~$
 <img width="200" src="assets/readme/playlist_screen-screenshot.png">
 
 <br><br>
