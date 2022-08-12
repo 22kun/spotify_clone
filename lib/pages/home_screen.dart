@@ -163,7 +163,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   capa: "assets/playlists/queen_logo.jpg",
                                   name: "Sheer Heart-Attack"),
                               cover: "assets/playlists/queen_logo.jpg",
-                              label: "XxxxxxxxxxxxXxxxxxxxxxxxxxxxxxxxx",
+                              label:
+                                  "This is Queen. The essencial tracks, all in one playlist.",
                               title: "Queen"),
                           asset: "assets/playlists/queen_logo.jpg",
                           label: "Queen"),

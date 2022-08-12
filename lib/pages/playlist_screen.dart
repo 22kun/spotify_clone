@@ -98,17 +98,26 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                 Row(
                   children: [
                     SizedBox(
-                      width: 70
-                      child: FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text(
-                          widget.title,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: "Poppins",
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold),
-                        ),
+                      width: 20,
+                    ),
+                    SizedBox(
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            width: 70,
+                            child: FittedBox(
+                              fit: BoxFit.fitWidth,
+                              child: Text(
+                                widget.title,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: "Poppins",
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
