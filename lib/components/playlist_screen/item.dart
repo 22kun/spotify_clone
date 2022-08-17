@@ -50,11 +50,12 @@ class Item extends StatelessWidget {
                           color: Colors.white,
                           fontFamily: "Gotham",
                           fontWeight: FontWeight.bold,
+                          overflow: TextOverflow.ellipsis,
                           fontSize: 15,
                         ),
                       ),
                       SizedBox(
-                        width: 90,
+                        width: 78,
                       )
                     ],
                   ),

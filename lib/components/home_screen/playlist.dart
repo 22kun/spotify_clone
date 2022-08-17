@@ -41,9 +41,13 @@ class Playlist extends StatelessWidget {
                           SizedBox(
                             width: 10,
                           ),
-                          Text(label,
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 12)),
+                          SizedBox(
+                              width: 115,
+                              child: Text(label,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      overflow: TextOverflow.ellipsis))),
                         ],
                       ),
                     )

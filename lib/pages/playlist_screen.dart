@@ -50,7 +50,8 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
     int randomNumber2 = random.nextInt(999);
     int randomNumber3 = random.nextInt(23);
     int randomNumber4 = random.nextInt(59);
-    Color red = Colors.red;
+    bool click = false;
+    bool color = false;
 
     return Scaffold(
       backgroundColor: Colors.transparent,
@@ -95,32 +96,16 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                 SizedBox(height: 20),
 
                 // Title
-                Row(
-                  children: [
-                    SizedBox(
-                      width: 20,
-                    ),
-                    SizedBox(
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 70,
-                            child: FittedBox(
-                              fit: BoxFit.fitWidth,
-                              child: Text(
-                                widget.title,
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontFamily: "Poppins",
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                SizedBox(
+                  width: 390,
+                  child: Text(
+                    widget.title,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30),
+                  ),
                 ),
 
                 SizedBox(height: 2),
@@ -165,14 +150,21 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                     SizedBox(
                       width: 10,
                     ),
-                    IconButton(
+                    Padding(
+                      padding: const EdgeInsets.only(left: 0.0),
+                      child: IconButton(
                         onPressed: () {
                           setState(() {
-                            red == Colors.white;
+                            click = !click;
+                            color = !color;
                           });
                         },
-                        icon: Image.asset("assets/icons/heart_outlined.png",
-                            color: red)),
+                        icon: Image.asset(
+                          "assets/icons/heart_outlined.png",
+                          color: (color == false) ? Colors.white : Colors.red,
+                        ),
+                      ),
+                    ),
                     SizedBox(
                       width: 270,
                     ),

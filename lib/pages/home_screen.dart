@@ -11,9 +11,14 @@ import 'package:spotify_clone/pages/playlist_screen.dart';
 
 void main() => runApp(Navigation());
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -122,51 +127,51 @@ class _MyHomePageState extends State<MyHomePage> {
                       Playlist(
                           app: PlaylistScreen(
                               item0: Item(
-                                capa: "assets/playlists/queen_logo.jpg",
+                                capa: "assets/playlists/this_is_queen.jpg",
                                 name: "Somebody to Love",
                                 artist: "Queen",
                               ),
                               item1: Item(
                                   artist: "Queen",
-                                  capa: "assets/playlists/queen_logo.jpg",
+                                  capa: "assets/playlists/this_is_queen.jpg",
                                   name: "Don't Stop Me Now"),
                               item2: Item(
                                   artist: "Queen",
-                                  capa: "assets/playlists/queen_logo.jpg",
+                                  capa: "assets/playlists/this_is_queen.jpg",
                                   name: "Killer Queen"),
                               item3: Item(
                                   artist: "Queen",
-                                  capa: "assets/playlists/queen_logo.jpg",
+                                  capa: "assets/playlists/this_is_queen.jpg",
                                   name: "I Want To Break Free"),
                               item4: Item(
                                   artist: "Queen",
-                                  capa: "assets/playlists/queen_logo.jpg",
+                                  capa: "assets/playlists/this_is_queen.jpg",
                                   name: "Bohemian Rhapsody"),
                               item5: Item(
                                   artist: "Queen",
-                                  capa: "assets/playlists/queen_logo.jpg",
+                                  capa: "assets/playlists/this_is_queen.jpg",
                                   name: "Love of My Life"),
                               item6: Item(
                                   artist: "Queen",
-                                  capa: "assets/playlists/queen_logo.jpg",
+                                  capa: "assets/playlists/this_is_queen.jpg",
                                   name: "Another One Bites The Dust"),
                               item7: Item(
                                   artist: "Queen",
-                                  capa: "assets/playlists/queen_logo.jpg",
+                                  capa: "assets/playlists/this_is_queen.jpg",
                                   name: "Radio Gaga"),
                               item8: Item(
                                   artist: "Queen",
-                                  capa: "assets/playlists/queen_logo.jpg",
+                                  capa: "assets/playlists/this_is_queen.jpg",
                                   name: "Under Pressure"),
                               item9: Item(
                                   artist: "Queen",
-                                  capa: "assets/playlists/queen_logo.jpg",
+                                  capa: "assets/playlists/this_is_queen.jpg",
                                   name: "Sheer Heart-Attack"),
-                              cover: "assets/playlists/queen_logo.jpg",
+                              cover: "assets/playlists/this_is_queen.jpg",
                               label:
                                   "This is Queen. The essencial tracks, all in one playlist.",
                               title: "Queen"),
-                          asset: "assets/playlists/queen_logo.jpg",
+                          asset: "assets/playlists/this_is_queen.jpg",
                           label: "Queen"),
 
                       SizedBox(width: 10),
@@ -174,7 +179,52 @@ class _MyHomePageState extends State<MyHomePage> {
                       // PLAYLIST 2
 
                       Playlist(
-                          app: LoginPage(),
+                          app: PlaylistScreen(
+                            cover: "assets/songs/paranoid_sabbath.jpg",
+                            title: "Paranoid",
+                            label:
+                                "This is Black Sabbath. The essential tracks, all in one playlist.",
+                            item0: Item(
+                                capa: "assets/songs/paranoid_sabbath.jpg",
+                                name: "War Pigs",
+                                artist: "Black Sabbath"),
+                            item1: Item(
+                                capa: "assets/songs/paranoid_sabbath.jpg",
+                                name: "Paranoid",
+                                artist: "Black Sabbath"),
+                            item2: Item(
+                                capa: "assets/songs/paranoid_sabbath.jpg",
+                                name: "Planet Caravan",
+                                artist: "Black Sabbath"),
+                            item3: Item(
+                                capa: "assets/songs/paranoid_sabbath.jpg",
+                                name: "Iron Man",
+                                artist: "Black Sabbath"),
+                            item4: Item(
+                                capa: "assets/songs/paranoid_sabbath.jpg",
+                                name: "Electric Funeral",
+                                artist: "Black Sabbath"),
+                            item5: Item(
+                                capa: "assets/songs/paranoid_sabbath.jpg",
+                                name: "Hand of Doom",
+                                artist: "Black Sabbath"),
+                            item6: Item(
+                                capa: "assets/songs/paranoid_sabbath.jpg",
+                                name: "Rat Salad",
+                                artist: "Black Sabbath"),
+                            item7: Item(
+                                capa: "assets/songs/paranoid_sabbath.jpg",
+                                name: "Fairies Wear Boots",
+                                artist: "Black Sabbath"),
+                            item8: Item(
+                                capa: "assets/songs/paranoid_sabbath.jpg",
+                                name: "War Pigs",
+                                artist: "Black Sabbath"),
+                            item9: Item(
+                                capa: "assets/songs/paranoid_sabbath.jpg",
+                                name: "Paranoid",
+                                artist: "Black Sabbath"),
+                          ),
                           asset: "assets/songs/paranoid_sabbath.jpg",
                           label: "Paranoid"),
                     ],
@@ -191,17 +241,130 @@ class _MyHomePageState extends State<MyHomePage> {
 
                       // PLAYLIST 3
                       Playlist(
-                          app: LoginPage(),
+                          app: PlaylistScreen(
+                            label:
+                                "This is Led Zeppelin. The essential tracks, all in one playlist.",
+                            cover: "assets/songs/stairway_led.jpeg",
+                            title: "Led Zeppelin IV (Deluxe Edition)",
+                            item0: Item(
+                              artist: "Led Zeppelin",
+                              capa: "assets/songs/stairway_led.jpeg",
+                              name: "Black Dog",
+                            ),
+                            item1: Item(
+                              artist: "Led Zeppelin",
+                              capa: "assets/songs/stairway_led.jpeg",
+                              name: "Rock and Roll",
+                            ),
+                            item2: Item(
+                              artist: "Led Zeppelin",
+                              capa: "assets/songs/stairway_led.jpeg",
+                              name: "The Battle of Evermore",
+                            ),
+                            item3: Item(
+                              artist: "Led Zeppelin",
+                              capa: "assets/songs/stairway_led.jpeg",
+                              name: "Stairway to Heaven",
+                            ),
+                            item4: Item(
+                              artist: "Led Zeppelin",
+                              capa: "assets/songs/stairway_led.jpeg",
+                              name: "Misty Mountain",
+                            ),
+                            item5: Item(
+                              artist: "Led Zeppelin",
+                              capa: "assets/songs/stairway_led.jpeg",
+                              name: "Four Sticks",
+                            ),
+                            item6: Item(
+                              artist: "Led Zeppelin",
+                              capa: "assets/songs/stairway_led.jpeg",
+                              name: "Going to California",
+                            ),
+                            item7: Item(
+                              artist: "Led Zeppelin",
+                              capa: "assets/songs/stairway_led.jpeg",
+                              name: "When the Levee Breaks",
+                            ),
+                            item8: Item(
+                              artist: "Led Zeppelin",
+                              capa: "assets/songs/stairway_led.jpeg",
+                              name:
+                                  "Black Dog - Basic Track with Guitar Overdubs",
+                            ),
+                            item9: Item(
+                              artist: "Led Zeppelin",
+                              capa: "assets/songs/stairway_led.jpeg",
+                              name: "Four Sticks - Alternate Mix",
+                            ),
+                          ),
                           asset: "assets/songs/stairway_led.jpeg",
-                          label: "Stairway to He..."),
+                          label: "Led Zeppelin IV (Deluxe Edition)"),
 
                       SizedBox(width: 10),
 
                       // PLAYLIST 4
                       Playlist(
-                          app: LoginPage(),
-                          asset: "assets/playlists/ordem_para_desc_album.jpeg",
-                          label: "Ordem Paranor..."),
+                        app: PlaylistScreen(
+                          cover: "assets/playlists/ordem_para_desc_album.jpeg",
+                          title:
+                              "Ordem Paranormal: Desconjuração (Trilha Sonora)",
+                          label: "",
+                          item0: Item(
+                            name: "Abertura (Desconjuração)",
+                            capa: "assets/playlists/ordem_para_desc_album.jpeg",
+                            artist: 'Julio Victor',
+                          ),
+                          item1: Item(
+                            name: "Sangue",
+                            capa: "assets/playlists/ordem_para_desc_album.jpeg",
+                            artist: 'Julio Victor',
+                          ),
+                          item2: Item(
+                            name: "Novo Lar",
+                            capa: "assets/playlists/ordem_para_desc_album.jpeg",
+                            artist: 'Julio Victor',
+                          ),
+                          item3: Item(
+                            name: "Fantasmas",
+                            capa: "assets/playlists/ordem_para_desc_album.jpeg",
+                            artist: 'Julio Victor',
+                          ),
+                          item4: Item(
+                            name: "Corre",
+                            capa: "assets/playlists/ordem_para_desc_album.jpeg",
+                            artist: 'Julio Victor',
+                          ),
+                          item5: Item(
+                            name: "Outro Lado",
+                            capa: "assets/playlists/ordem_para_desc_album.jpeg",
+                            artist: 'Julio Victor',
+                          ),
+                          item6: Item(
+                            name: "Veríssimo",
+                            capa: "assets/playlists/ordem_para_desc_album.jpeg",
+                            artist: 'Julio Victor',
+                          ),
+                          item7: Item(
+                            name: "Sorriso",
+                            capa: "assets/playlists/ordem_para_desc_album.jpeg",
+                            artist: 'Julio Victor',
+                          ),
+                          item8: Item(
+                            name: "Kian",
+                            capa: "assets/playlists/ordem_para_desc_album.jpeg",
+                            artist: 'Julio Victor',
+                          ),
+                          item9: Item(
+                            name: "Máscaras",
+                            capa: "assets/playlists/ordem_para_desc_album.jpeg",
+                            artist: 'Julio Victor',
+                          ),
+                        ),
+                        asset: "assets/playlists/ordem_para_desc_album.jpeg",
+                        label:
+                            "Ordem Paranormal: Desconjuração (Trilha Sonora)",
+                      ),
                     ],
                   ),
                   SizedBox(
