@@ -10,14 +10,16 @@ class Item extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(children: [
-        Container(
-          height: 70,
-          width: 400,
+    return Column(children: [
+      SizedBox(
+        height: 70,
+        width: 400,
+        child: GestureDetector(
+          onTap: () => {},
+          onLongPress: () => {},
           child: Row(children: [
             Image.asset(capa),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Column(
               children: [
                 SizedBox(height: 10),
@@ -70,10 +72,10 @@ class Item extends StatelessWidget {
                 icon: Image.asset("assets/icons/properties.png"))
           ]),
         ),
-        SizedBox(
-          height: 20,
-        )
-      ]),
-    );
+      ),
+      SizedBox(
+        height: 20,
+      )
+    ]);
   }
 }
