@@ -4,6 +4,7 @@ import 'package:spotify_clone/pages/home_screen.dart';
 import 'package:spotify_clone/pages/login_page.dart';
 import 'package:spotify_clone/pages/playlist_screen.dart';
 import 'package:spotify_clone/pages/search.dart';
+import 'package:spotify_clone/pages/search2.dart';
 
 void main() => runApp(const Navigation());
 
@@ -33,6 +34,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int selectedPage = 0;
 
   final _pageOptions = [
+    Search_Page(),
     Search(),
     HomeScreen(),
   ];

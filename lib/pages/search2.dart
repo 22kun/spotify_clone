@@ -8,6 +8,13 @@ class Search_Page extends StatefulWidget {
 
   @override
   State<Search_Page> createState() => _Search_PageState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Spotify',
+      theme: ThemeData(primarySwatch: Colors.green, fontFamily: 'Gotham-Bold'),
+      debugShowCheckedModeBanner: false,
+    );
+  }
 }
 
 class _Search_PageState extends State<Search_Page> {
@@ -43,9 +50,15 @@ class _Search_PageState extends State<Search_Page> {
                   width: 10,
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 20,
                   width: 400,
-                  child: TextField(),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      border: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green)),
+                      hintText: 'Search Query',
+                    ),
+                  ),
                 ),
               ],
             ),
