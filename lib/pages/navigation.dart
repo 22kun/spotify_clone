@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/components/music_player/music_player.dart';
 import 'package:spotify_clone/components/playlist_screen/item.dart';
 import 'package:spotify_clone/pages/home_screen.dart';
 import 'package:spotify_clone/pages/login_page.dart';
@@ -34,7 +35,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int selectedPage = 0;
 
   final _pageOptions = [
-    Search_Page(),
+    MusicPlayer(),
     Search(),
     HomeScreen(),
   ];
