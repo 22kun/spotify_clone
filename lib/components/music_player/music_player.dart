@@ -1,6 +1,8 @@
+import 'dart:html';
 import 'dart:math';
 
 import 'package:audioplayers/audioplayers.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -35,6 +37,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
   @override
   void initState() {
     super.initState();
+    setAudio();
 
     audioPlayer.onPlayerStateChanged.listen((state) {
       setState(() {
@@ -53,6 +56,16 @@ class _MusicPlayerState extends State<MusicPlayer> {
         position = newPosition;
       });
     });
+  }
+
+  Future setAudio() async {
+    audioPlayer.setReleaseMode(ReleaseMode.LOOP);
+
+    final result = await FilePicker.platform.pickFiles();
+
+    final player = AudioCache(prefix: "assets/audio/");
+    final url = await player.load("Queen_-_Dont_Stop_Me_Now.mp3");
+    audioPlayer.setUrl(url.path, isLocal: true);
   }
 
   @override
@@ -140,7 +153,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 ),
                 Slider(
                     min: 0,
-                    max: duration.inSeconds.toDouble(),
+                    max: duration.inSeconds.toDouble() + 1.0,
                     value: position.inSeconds.toDouble(),
                     onChanged: (value) async {
                       final position = Duration(seconds: value.toInt());
@@ -165,9 +178,8 @@ class _MusicPlayerState extends State<MusicPlayer> {
                       if (isPlaying) {
                         await audioPlayer.pause();
                       } else {
-                        String url =
-                            'https://fine.sunproxy.net/file/eHh4cHl1cFNXT01NU2RES2tTRHZjWmlGY3RJbEVHWDQvemUvRHdMVUxFaXllaUNEU1VRR0JzekdCYnpyNjkwZE1SRnpqaU1FZHlvMnltT0NMWjBKZTRURlhBcnZjZTQrQzBUSTBnS2FybU09/queen_david_bowie_-_under_pressure_(BornMP3.com).mp3';
-                        await audioPlayer.play(url);
+                        await audioPlayer
+                            .play("assets/audio/Queen_-_Dont_Stop_Me_Now.mp3");
                       }
                     },
                     icon: Icon(
