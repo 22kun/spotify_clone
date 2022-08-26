@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spotify_clone/components/home_screen/collection.dart';
 import 'package:spotify_clone/pages/login_page.dart';
 import 'package:spotify_clone/pages/search.dart';
+import 'dart:html';
 
 class Search_Page extends StatefulWidget {
   const Search_Page({Key? key}) : super(key: key);

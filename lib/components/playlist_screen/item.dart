@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/pages/playlist_screen.dart';
+import 'dart:html';
 
 class Item extends StatelessWidget {
   String capa;
   String name;
   String artist;
+  Widget app;
 
-  Item({required this.capa, required this.name, required this.artist});
+  Item(
+      {required this.capa,
+      required this.name,
+      required this.artist,
+      required this.app});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +21,12 @@ class Item extends StatelessWidget {
         height: 70,
         width: 400,
         child: GestureDetector(
-          onTap: () => {},
+          onTap: () => {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => app),
+            )
+          },
           onLongPress: () => {},
           child: Row(children: [
             Image.asset(capa),

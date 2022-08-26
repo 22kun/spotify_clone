@@ -5,6 +5,7 @@ import 'package:spotify_clone/components/playlist_screen/item.dart';
 import 'package:spotify_clone/pages/home_screen.dart';
 import 'package:spotify_clone/pages/navigation.dart';
 import 'dart:math';
+import 'dart:html';
 
 class PlaylistScreen extends StatefulWidget {
   String cover;

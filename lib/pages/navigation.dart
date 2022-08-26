@@ -6,13 +6,14 @@ import 'package:spotify_clone/pages/login_page.dart';
 import 'package:spotify_clone/pages/playlist_screen.dart';
 import 'package:spotify_clone/pages/search.dart';
 import 'package:spotify_clone/pages/search2.dart';
+import 'dart:html';
 
 void main() => runApp(const Navigation());
 
 class Navigation extends StatelessWidget {
   const Navigation({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Code Sample';
+  static const String _title = 'Spotify Clone';
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +36,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int selectedPage = 0;
 
   final _pageOptions = [
-    MusicPlayer(),
-    Search(),
     HomeScreen(),
+    Search(),
+    MusicPlayer(),
   ];
 
   @override
