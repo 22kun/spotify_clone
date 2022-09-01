@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'dart:math';
 
 import 'package:audioplayers/audioplayers.dart';
@@ -64,9 +63,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
   Future setAudio() async {
     audioPlayer.setReleaseMode(ReleaseMode.LOOP);
 
-    final player = AudioCache(prefix: "assets/audio/");
-    final url = await player.load("Queen_-_Dont_Stop_Me_Now.mp3");
-    audioPlayer.setUrl(url.path, isLocal: true);
+    
   }
 
   @override
@@ -89,18 +86,26 @@ class _MusicPlayerState extends State<MusicPlayer> {
         ),
         child: Column(
           children: [
+            SizedBox(
+              height: 30,
+            ),
             Row(
               children: [
                 SizedBox(
+                  width: 20,
+                ),
+                SizedBox(
                   height: 60,
                   width: 70,
-                  child: FlatButton(
-                    textColor: Colors.white,
+                  child: GestureDetector(
                     child: Text(
                       "<",
-                      style: TextStyle(fontSize: 40, fontFamily: "Poppins"),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontFamily: "Poppins",
+                          color: Colors.white),
                     ),
-                    onPressed: () {
+                    onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -169,7 +174,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                   child: Row(
                     children: [
                       SizedBox(
-                        width: 90,
+                        width: 50,
                       ),
                       Column(children: [
                         Text(
@@ -187,17 +192,17 @@ class _MusicPlayerState extends State<MusicPlayer> {
             Column(
               children: [
                 SizedBox(
-                  height: 40,
+                  height: 80,
                 ),
 
                 // Album Cover
 
                 SizedBox(
-                  width: 450,
+                  width: 340,
                   child: Image.asset("assets/playlists/this_is_queen.jpg",
                       fit: BoxFit.cover),
                 ),
-                SizedBox(height: 70),
+                SizedBox(height: 90),
 
                 // Title
                 Row(
@@ -246,16 +251,19 @@ class _MusicPlayerState extends State<MusicPlayer> {
                   ]),
                 ),
 
-                Slider(
-                    activeColor: Colors.white,
-                    inactiveColor: Colors.white24,
-                    min: 0,
-                    max: duration.inSeconds.toDouble() + 215,
-                    value: position.inSeconds.toDouble() + 1,
-                    onChanged: (value) async {
-                      final position = Duration(seconds: value.toInt());
-                      await audioPlayer.seek(position);
-                    }),
+                SizedBox(
+                  width: 400,
+                  child: Slider(
+                      activeColor: Colors.white,
+                      inactiveColor: Colors.white24,
+                      min: 0,
+                      max: duration.inSeconds.toDouble() + 215,
+                      value: position.inSeconds.toDouble() + 1,
+                      onChanged: (value) async {
+                        final position = Duration(seconds: value.toInt());
+                        await audioPlayer.seek(position);
+                      }),
+                ),
                 Row(children: [
                   SizedBox(width: 30),
                   Text(
@@ -263,7 +271,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                     style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(
-                    width: 380,
+                    width: 285,
                   ),
                   Text(
                     "3:34",
@@ -278,8 +286,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                       if (isPlaying) {
                         await audioPlayer.pause();
                       } else {
-                        await audioPlayer
-                            .play("assets/audio/Queen_-_Dont_Stop_Me_Now.mp3");
+                        await audioPlayer.play("");
                       }
                     },
                     icon: Icon(
@@ -289,16 +296,6 @@ class _MusicPlayerState extends State<MusicPlayer> {
                     iconSize: 50,
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: 420,
-                  child: Column(children: []),
-                ),
-                SizedBox(
-                  height: 30,
-                )
               ],
             )
           ],

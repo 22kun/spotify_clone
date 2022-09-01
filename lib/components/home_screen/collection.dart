@@ -11,7 +11,7 @@ class Collection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        FlatButton(
+        OutlinedButton(
             child: Image.asset(
               asset,
               width: 172,

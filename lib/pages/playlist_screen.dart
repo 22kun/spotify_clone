@@ -5,7 +5,6 @@ import 'package:spotify_clone/components/playlist_screen/item.dart';
 import 'package:spotify_clone/pages/home_screen.dart';
 import 'package:spotify_clone/pages/navigation.dart';
 import 'dart:math';
-import 'dart:html';
 
 class PlaylistScreen extends StatefulWidget {
   String cover;
@@ -68,15 +67,20 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
             Row(
               children: [
                 SizedBox(
+                  width: 30,
+                ),
+                SizedBox(
                   height: 60,
                   width: 70,
-                  child: FlatButton(
-                    textColor: Colors.white,
+                  child: GestureDetector(
                     child: Text(
                       "<",
-                      style: TextStyle(fontSize: 40, fontFamily: "Poppins"),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontFamily: "Poppins",
+                          color: Colors.white),
                     ),
-                    onPressed: () {
+                    onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => HomeScreen()),

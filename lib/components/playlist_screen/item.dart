@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/pages/playlist_screen.dart';
-import 'dart:html';
 
 class Item extends StatelessWidget {
   String capa;
@@ -29,7 +28,6 @@ class Item extends StatelessWidget {
           },
           onLongPress: () => {},
           child: Row(children: [
-            Image.asset(capa),
             const SizedBox(width: 10),
             Column(
               children: [
@@ -76,7 +74,7 @@ class Item extends StatelessWidget {
               ],
             ),
             Container(
-              width: 52,
+              width: 120,
             ),
             IconButton(
                 onPressed: () {},
