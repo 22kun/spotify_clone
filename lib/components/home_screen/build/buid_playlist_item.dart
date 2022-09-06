@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:spotify_clone/components/music_player/build_music_player.dart';
 import 'package:spotify_clone/components/music_player/music_player.dart';
 import 'package:spotify_clone/components/playlist_screen/item.dart';
 import 'package:spotify_clone/pages/home_screen.dart';
@@ -8,62 +9,62 @@ class BuildPSItems {
     switch (item_number) {
       case 0:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().queen(0),
           capa: "assets/playlists/this_is_queen.jpg",
           name: "Somebody to Love",
           artist: "Queen",
         );
       case 1:
         return Item(
-            app: MusicPlayer(),
+            app: BuildMusicPlayer().queen(1),
             artist: "Queen",
             capa: "assets/playlists/this_is_queen.jpg",
             name: "Don't Stop Me Now");
       case 2:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().queen(2),
             artist: "Queen",
             capa: "assets/playlists/this_is_queen.jpg",
             name: "Killer Queen");
       case 3:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().queen(3),
             artist: "Queen",
             capa: "assets/playlists/this_is_queen.jpg",
             name: "I Want To Break Free");
       case 4:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().queen(4),
             artist: "Queen",
             capa: "assets/playlists/this_is_queen.jpg",
             name: "Bohemian Rhapsody");
       case 5:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().queen(5),
             artist: "Queen",
             capa: "assets/playlists/this_is_queen.jpg",
             name: "Love of My Life");
       case 6:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().queen(6),
             artist: "Queen",
             capa: "assets/playlists/this_is_queen.jpg",
             name: "Another One Bites The Dust");
       case 7:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().queen(7),
             artist: "Queen",
             capa: "assets/playlists/this_is_queen.jpg",
-            name: "Radio Gaga");
+            name: "Radio Ga Ga");
       case 8:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().queen(8),
             artist: "Queen",
             capa: "assets/playlists/this_is_queen.jpg",
             name: "Under Pressure");
       case 9:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().queen(9),
             artist: "Queen",
             capa: "assets/playlists/this_is_queen.jpg",
             name: "Sheer Heart-Attack");

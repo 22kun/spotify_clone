@@ -7,7 +7,15 @@ import 'package:spotify_clone/pages/home_screen.dart';
 import '../../pages/playlist_screen.dart';
 
 class MusicPlayer extends StatefulWidget {
-  const MusicPlayer({Key? key}) : super(key: key);
+  String musicPath;
+  String songName;
+  String artist;
+  String cover;
+  MusicPlayer(
+      {required this.musicPath,
+      required this.songName,
+      required this.artist,
+      required this.cover});
 
   @override
   State<MusicPlayer> createState() => _MusicPlayerState();
@@ -110,7 +118,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                       ),
                       Column(children: [
                         Text(
-                          'PLAYING FROM "THIS IS QUEEN"',
+                          'PLAYING FROM PLAYLIST',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.white, fontFamily: "Poppins"),
@@ -131,8 +139,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
 
                 SizedBox(
                   width: 340,
-                  child: Image.asset("assets/playlists/this_is_queen.jpg",
-                      fit: BoxFit.cover),
+                  child: Image.asset(widget.cover, fit: BoxFit.cover),
                 ),
                 SizedBox(height: 90),
 
@@ -144,7 +151,8 @@ class _MusicPlayerState extends State<MusicPlayer> {
                     ),
                     SizedBox(
                       child: Text(
-                        "Don't Stop Me Now",
+                        widget.songName,
+                        overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             color: Colors.white,
@@ -164,7 +172,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                     ),
                     SizedBox(
                       child: Text(
-                        "Queen",
+                        widget.artist,
                         style: TextStyle(
                             color: Colors.grey,
                             fontFamily: "Poppins",
@@ -207,7 +215,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                           style: TextStyle(color: Colors.white),
                         ),
                         Text(
-                          formatTime(duration),
+                          formatTime(duration - position),
                           style: TextStyle(color: Colors.white),
                         )
                       ]),
@@ -220,8 +228,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                       if (isPlaying) {
                         await audioPlayer.stop();
                       } else {
-                        String audioasset =
-                            "assets/audio/queen_-_dont_stop_me_now.mp3";
+                        String audioasset = widget.musicPath;
                         ByteData bytes = await rootBundle
                             .load(audioasset); //load sound from assets
                         Uint8List soundbytes = bytes.buffer.asUint8List(

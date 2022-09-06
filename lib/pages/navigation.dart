@@ -37,7 +37,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   final _pageOptions = [
     HomeScreen(),
     Search(),
-    MusicPlayer(),
+    MusicPlayer(
+        artist: "Júlio Victor",
+        cover: "assets/playlists/ordem_para_desc_album.jpeg",
+        musicPath: "assets/audio/sangue.mp3",
+        songName: "Sangue"),
   ];
 
   @override
