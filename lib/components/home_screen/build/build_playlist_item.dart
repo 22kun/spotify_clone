@@ -1,6 +1,4 @@
-import 'package:flutter/widgets.dart';
 import 'package:spotify_clone/components/music_player/build_music_player.dart';
-import 'package:spotify_clone/components/music_player/music_player.dart';
 import 'package:spotify_clone/components/playlist_screen/item.dart';
 import 'package:spotify_clone/pages/home_screen.dart';
 
@@ -75,61 +73,61 @@ class BuildPSItems {
     switch (item_number) {
       case 0:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().paranoid(0),
             capa: "assets/songs/paranoid_sabbath.jpg",
             name: "War Pigs",
             artist: "Black Sabbath");
       case 1:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().paranoid(1),
             capa: "assets/songs/paranoid_sabbath.jpg",
             name: "Paranoid",
             artist: "Black Sabbath");
       case 2:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().paranoid(2),
             capa: "assets/songs/paranoid_sabbath.jpg",
             name: "Planet Caravan",
             artist: "Black Sabbath");
       case 3:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().paranoid(3),
             capa: "assets/songs/paranoid_sabbath.jpg",
             name: "Iron Man",
             artist: "Black Sabbath");
       case 4:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().paranoid(4),
             capa: "assets/songs/paranoid_sabbath.jpg",
             name: "Electric Funeral",
             artist: "Black Sabbath");
       case 5:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().paranoid(5),
             capa: "assets/songs/paranoid_sabbath.jpg",
             name: "Hand of Doom",
             artist: "Black Sabbath");
       case 6:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().paranoid(6),
             capa: "assets/songs/paranoid_sabbath.jpg",
             name: "Rat Salad",
             artist: "Black Sabbath");
       case 7:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().paranoid(7),
             capa: "assets/songs/paranoid_sabbath.jpg",
             name: "Fairies Wear Boots",
             artist: "Black Sabbath");
       case 8:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().paranoid(8),
             capa: "assets/songs/paranoid_sabbath.jpg",
             name: "War Pigs",
             artist: "Black Sabbath");
       case 9:
         return Item(
-            app: HomeScreen(),
+            app: BuildMusicPlayer().paranoid(9),
             capa: "assets/songs/paranoid_sabbath.jpg",
             name: "Paranoid",
             artist: "Black Sabbath");
@@ -215,70 +213,70 @@ class BuildPSItems {
     switch (item_number) {
       case 0:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().ordem(0),
           name: "Abertura (Desconjuração)",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
         );
       case 1:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().ordem(1),
           name: "Sangue",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
         );
       case 2:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().ordem(2),
           name: "Novo Lar",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
         );
       case 3:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().ordem(3),
           name: "Fantasmas",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
         );
       case 4:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().ordem(4),
           name: "Corre",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
         );
       case 5:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().ordem(5),
           name: "Outro Lado",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
         );
       case 6:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().ordem(6),
           name: "Veríssimo",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
         );
       case 7:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().ordem(7),
           name: "Sorriso",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
         );
       case 8:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().ordem(8),
           name: "Kian",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',
         );
       case 9:
         return Item(
-          app: HomeScreen(),
+          app: BuildMusicPlayer().ordem(9),
           name: "Máscaras",
           capa: "assets/playlists/ordem_para_desc_album.jpeg",
           artist: 'Julio Victor',

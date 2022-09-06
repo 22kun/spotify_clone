@@ -1,12 +1,12 @@
 > # Spotify Clone
 >> In this project, I create the main features of the famous app Spotify.<br>  <br> Neste projeto recreei as principais funcionalidades do famoso app Spotify. <br> <br>
->> <img src="http://img.shields.io/static/v1?label=STATUS&message=%20Developing&color=darkgreen&style=for-the-badge"/> <br>
+>> <img src="http://img.shields.io/static/v1?label=STATUS&message=%20Standby&color=darkgreen&style=for-the-badge"/> <br>
 >>✅ $~~~$ Home Screen <br>
 ✅ $~~~$ Playlists <br>
 ✅ $~~~$ Search Page <br>
 ✅ $~~~$ Playlist Screen <br>
-⌛ $~~~$ Songs <br>
-⌛ $~~~$ Music Player
+✅ $~~~$ Songs <br>
+✅ $~~~$ Music Player
 <br>
 <br>                                                   
  
@@ -22,7 +22,7 @@
 <img width="200" src="assets/readme/home_screen-screenshot.png"> $~$
 <img width="200" src="assets/readme/search_screen-screenshot.png"> $~$
 <img width="205" src="assets/readme/playlist_screen-screenshot.png">$~$
-<img width="25%" src="assets/readme/music_player-screenshot.png">
+<img width="226" src="assets/readme/music_player-screenshot.png">
 
 <br><br>
 

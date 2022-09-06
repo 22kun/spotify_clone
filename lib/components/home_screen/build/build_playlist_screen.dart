@@ -1,7 +1,4 @@
-import 'package:spotify_clone/components/home_screen/build/buid_playlist_item.dart';
-import 'package:spotify_clone/components/music_player/music_player.dart';
-import 'package:spotify_clone/components/playlist_screen/item.dart';
-import 'package:spotify_clone/pages/home_screen.dart';
+import 'package:spotify_clone/components/home_screen/build/build_playlist_item.dart';
 import 'package:spotify_clone/pages/playlist_screen.dart';
 
 class BuildPScreen {
