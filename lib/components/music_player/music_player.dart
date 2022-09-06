@@ -1,13 +1,9 @@
-import 'dart:math';
-
 import 'package:audioplayers/audioplayers.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/components/home_screen/build/build_playlist_screen.dart';
 import 'package:spotify_clone/components/playlist_screen/item.dart';
-
+import 'package:flutter/services.dart';
 import 'package:spotify_clone/pages/home_screen.dart';
-import 'package:spotify_clone/pages/navigation.dart';
-
 import '../../pages/playlist_screen.dart';
 
 class MusicPlayer extends StatefulWidget {
@@ -18,7 +14,7 @@ class MusicPlayer extends StatefulWidget {
 }
 
 class _MusicPlayerState extends State<MusicPlayer> {
-  final audioPlayer = AudioPlayer();
+  AudioPlayer audioPlayer = AudioPlayer();
   bool isPlaying = false;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
@@ -39,7 +35,6 @@ class _MusicPlayerState extends State<MusicPlayer> {
   @override
   void initState() {
     super.initState();
-    setAudio();
 
     audioPlayer.onPlayerStateChanged.listen((state) {
       setState(() {
@@ -58,12 +53,6 @@ class _MusicPlayerState extends State<MusicPlayer> {
         position = newPosition;
       });
     });
-  }
-
-  Future setAudio() async {
-    audioPlayer.setReleaseMode(ReleaseMode.LOOP);
-
-    
   }
 
   @override
@@ -106,67 +95,10 @@ class _MusicPlayerState extends State<MusicPlayer> {
                           color: Colors.white),
                     ),
                     onTap: () {
-                      Navigator.push(
+                      audioPlayer.stop();
+                      Navigator.of(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => PlaylistScreen(
-                              item0: Item(
-                                app: HomeScreen(),
-                                capa: "assets/playlists/this_is_queen.jpg",
-                                name: "Somebody to Love",
-                                artist: "Queen",
-                              ),
-                              item1: Item(
-                                  app: MusicPlayer(),
-                                  artist: "Queen",
-                                  capa: "assets/playlists/this_is_queen.jpg",
-                                  name: "Don't Stop Me Now"),
-                              item2: Item(
-                                  app: HomeScreen(),
-                                  artist: "Queen",
-                                  capa: "assets/playlists/this_is_queen.jpg",
-                                  name: "Killer Queen"),
-                              item3: Item(
-                                  app: HomeScreen(),
-                                  artist: "Queen",
-                                  capa: "assets/playlists/this_is_queen.jpg",
-                                  name: "I Want To Break Free"),
-                              item4: Item(
-                                  app: HomeScreen(),
-                                  artist: "Queen",
-                                  capa: "assets/playlists/this_is_queen.jpg",
-                                  name: "Bohemian Rhapsody"),
-                              item5: Item(
-                                  app: HomeScreen(),
-                                  artist: "Queen",
-                                  capa: "assets/playlists/this_is_queen.jpg",
-                                  name: "Love of My Life"),
-                              item6: Item(
-                                  app: HomeScreen(),
-                                  artist: "Queen",
-                                  capa: "assets/playlists/this_is_queen.jpg",
-                                  name: "Another One Bites The Dust"),
-                              item7: Item(
-                                  app: HomeScreen(),
-                                  artist: "Queen",
-                                  capa: "assets/playlists/this_is_queen.jpg",
-                                  name: "Radio Gaga"),
-                              item8: Item(
-                                  app: HomeScreen(),
-                                  artist: "Queen",
-                                  capa: "assets/playlists/this_is_queen.jpg",
-                                  name: "Under Pressure"),
-                              item9: Item(
-                                  app: HomeScreen(),
-                                  artist: "Queen",
-                                  capa: "assets/playlists/this_is_queen.jpg",
-                                  name: "Sheer Heart-Attack"),
-                              cover: "assets/playlists/this_is_queen.jpg",
-                              label:
-                                  "This is Queen. The essencial tracks, all in one playlist.",
-                              title: "Queen"),
-                        ),
-                      );
+                      ).pop();
                     },
                   ),
                 ),
@@ -257,36 +189,49 @@ class _MusicPlayerState extends State<MusicPlayer> {
                       activeColor: Colors.white,
                       inactiveColor: Colors.white24,
                       min: 0,
-                      max: duration.inSeconds.toDouble() + 215,
-                      value: position.inSeconds.toDouble() + 1,
+                      max: duration.inSeconds.toDouble(),
+                      value: position.inSeconds.toDouble(),
                       onChanged: (value) async {
                         final position = Duration(seconds: value.toInt());
                         await audioPlayer.seek(position);
                       }),
                 ),
-                Row(children: [
-                  SizedBox(width: 30),
-                  Text(
-                    formatTime(position),
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  SizedBox(
-                    width: 285,
-                  ),
-                  Text(
-                    "3:34",
-                    style: TextStyle(color: Colors.white),
-                  )
-                ]),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          formatTime(position),
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          formatTime(duration),
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ]),
+                ),
                 CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 35,
                   child: IconButton(
                     onPressed: () async {
                       if (isPlaying) {
-                        await audioPlayer.pause();
+                        await audioPlayer.stop();
                       } else {
-                        await audioPlayer.play("");
+                        String audioasset =
+                            "assets/audio/queen_-_dont_stop_me_now.mp3";
+                        ByteData bytes = await rootBundle
+                            .load(audioasset); //load sound from assets
+                        Uint8List soundbytes = bytes.buffer.asUint8List(
+                            bytes.offsetInBytes, bytes.lengthInBytes);
+                        int result = await audioPlayer.playBytes(soundbytes);
+                        if (result == 1) {
+                          print("Sound playing successful.");
+                        } else {
+                          print("Error while playing sound.");
+                        }
                       }
                     },
                     icon: Icon(

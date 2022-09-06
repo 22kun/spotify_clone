@@ -12,7 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_native_splash: ^2.2.3+1
-
+  audioplayer: 0.8.1
+  audioplayer_web: 0.7.1
   cupertino_icons: ^1.0.2
   audioplayers: ^0.20.1
   just_audio: ^0.9.28
@@ -61,6 +62,7 @@ flutter:
      - assets/playlists/
      - assets/songs/
      - assets/readme/
+     - assets/
      - assets/audio/
      
 
